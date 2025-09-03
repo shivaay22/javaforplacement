@@ -21,20 +21,20 @@ public class decimaltobinary {
     //     decimal(5);
     // }
 
-    public static void dectobin(int num)
-    {
+   public static void dectobin(int num) {
+        int decnum = num;
         int bin = 0;
         int pow = 0;
 
-        while(num!=0)
-        {
+        while (num != 0) {
             int ld = num % 2;
             bin = bin + (ld * (int) Math.pow(10, pow));
             pow++;
             num = num / 2;
         }
+        System.out.println(decnum + " = " + bin);
     }
     public static void main(String[] args) {
-        
+        dectobin(5);
     }
 }

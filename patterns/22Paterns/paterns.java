@@ -32,7 +32,25 @@ public class paterns {
             }
             System.out.println();
         }
-    }    public static void main(String[] args) {
-        print1(5);
+    }    
+
+    public static void print4(int n){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i == 0 || i == n || j == 0 || j == n ){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println();
     }
+
+
+    public static void main(String[] args) {
+        print4(5);
+    }
+    
 }

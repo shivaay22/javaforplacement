@@ -20,7 +20,7 @@ public class secondLarget {
         {
             if(arr[i] == max)
             {
-                arr[i] = -1;
+                arr[i] = Integer.MIN_VALUE;
             }
         }
         int Smax = findMax(arr);
@@ -35,7 +35,7 @@ public class secondLarget {
         {
             if(arr[i] == smax)
             {
-                arr[i] = -2;
+                arr[i] = Integer.MIN_VALUE;
             }
             i++;
         }

@@ -53,6 +53,7 @@ public class nthNode {
                 }
                 return slow;
             }
+            
             node deleteNode(node head,int pos)
             {
                 node slow = head;
@@ -98,10 +99,12 @@ public class nthNode {
         
         // node ans = ll.getnthNode(ll.head, 2);
         // System.out.println(ans.data);
-        node temp = ll.head;
-        ll.display();
-        node ans = ll.deleteNode(ll.head, 2);
-        ll.display();
+        // node temp = ll.head;
+        // ll.display();
+        // node ans = ll.deleteNode(ll.head, 2);
+            node ans = ll.getnthNode(ll.head, 2);
+        // ll.display();
+        System.out.println(ans.data);
         // for(int i=0;i<n;i++)
         // {
         //     System.out.print(temp.data + " ");

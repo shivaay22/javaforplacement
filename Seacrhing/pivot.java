@@ -37,6 +37,21 @@ public class pivot
         return -1; // Return -1 if no pivot is found
     }
 
+    public static int pivotele(int arr[]){
+        int n = arr.length;
+        int i = 0;
+        int j = n - 1;
+        while(i < j){
+            if(arr[i] > arr[i+1]){
+                i++;
+                j--;
+            }
+            else{
+                return arr[i];
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args)
     {
         int arr[] = {10, 9, 7, 4, 6, 8};

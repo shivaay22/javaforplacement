@@ -1,12 +1,11 @@
-public class reviseloop {
+public class Revision {
     
     public static void main(String[] args) {
 
-        int num = 153;
+        int num = 371;
         int count = 0;
         int sum = 0;
         int temp = num;
-        int count1 = Integer.toString(num).length();
         while(num != 0)
         {
             int ld = num % 10;
@@ -23,6 +22,5 @@ public class reviseloop {
             System.out.println("Not");
         }
         System.out.println(count);
-        System.out.println(count1);
     }
 }

@@ -25,38 +25,35 @@ class solution
         System.out.println();
     }
 
-    public void newMerge(int arr1[],int arr2[])
-    {
+    public void newmergeArr(int arr1[], int arr2[]) {
         int i = 0;
         int j = 0;
         int k = 0;
         int n = arr1.length;
         int m = arr2.length;
-        int newArr[] = new int[n+m];
-        while(i<n  && j<m)
-        {
-            if(arr1[i] < arr2[j])
-            {
-                newArr[k++] = arr1[i];
-            }
-            else
-            {
-                newArr[k++] = arr2[j];
+        int newArr[] = new int[n + m];
+
+        // Merge the two arrays
+        while (i < n && j < m) {
+            if (arr1[i] < arr2[j]) {
+                newArr[k++] = arr1[i++];
+            } else {
+                newArr[k++] = arr2[j++];
             }
         }
 
-        while(i<n)
-        {
+        // Copy remaining elements
+        while (i < n) {
             newArr[k++] = arr1[i++];
         }
-        while(j<m)
-        {
+
+        while (j < m) {
             newArr[k++] = arr2[j++];
         }
 
-        for(int x=0;x<newArr.length;x++)
-        {
-            System.out.print(newArr[i] + " ");
+        // Print merged array
+        for (int x = 0; x < newArr.length; x++) {
+            System.out.print(newArr[x] + " ");
         }
         System.out.println();
     }
@@ -65,10 +62,10 @@ class solution
 public class newMergeArray {
     
     public static void main(String[] args) {
-        int arr1[] = {1,2,3,4,5};
-        int arr2[] = {6,7,8,9,10};
+        int arr1[] = {2,4};
+        int arr2[] = {1,3,5,7};
 
         solution s1 = new solution();
-        s1.mergeArr(arr1, arr2);
+        s1.newmergeArr(arr1, arr2);
     }
 }

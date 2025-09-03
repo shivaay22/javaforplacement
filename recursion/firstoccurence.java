@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class firstoccurence {
     // public static int fo(int a[],int key,int i)
@@ -85,18 +86,22 @@ public class firstoccurence {
         return -1;
     }
 
-    public static int lastOccur(int arr[],int key)
+    public static void lastOccur(int arr[],int key)
     {
+        ArrayList<Integer> newArr = new ArrayList<>();
         int lastIndex = -1; // Initialize with -1 to indicate not found.
     
         // Iterate through the array
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == key) {
                 lastIndex = i; // Update lastIndex whenever target is found
+                newArr.add(lastIndex);
             }
         }
 
-        return lastIndex;
+        System.out.println(newArr);
+
+        // return lastIndex;
     }
 
     public static int count(int arr[],int key)
@@ -114,11 +119,12 @@ public class firstoccurence {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int arr[] = {3,5,5,1,1,18,0,2,2,2,2};
-        int ans = firstOccur(arr, 2);
-        System.out.println(ans);
-        int ans2 = lastOccur(arr, 2);
-        System.out.println(ans2);
-        System.out.println("Count of 2: " + count(arr,2));
+        // int ans = firstOccur(arr, 2);
+        // System.out.println(ans);
+        // int ans2 = lastOccur(arr, 2);
+        // System.out.println(ans2);
+        // System.out.println("Count of 2: " + count(arr,2));
+        lastOccur(arr, 1);
     } 
 
 

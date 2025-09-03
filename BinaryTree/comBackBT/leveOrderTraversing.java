@@ -1,6 +1,7 @@
 import java.util.*;
+import java.util.LinkedList;
 
-import javax.management.Query;
+
 
 public class leveOrderTraversing {
 
@@ -67,6 +68,13 @@ public class leveOrderTraversing {
             }
             nthLevel(root.left,n-1);
             nthLevel(root.right, n-1);
+            /*
+             * These lines do not run at the same time.
+
+First, nthLevel(root.left, n - 1) is called and completed entirely, including all its internal recursive calls (into left of left, left of right, etc.).
+
+Then, after it’s fully done, the program moves to nthLevel(root.right, n - 1).
+             */
         }
 
         public static void display(node root)
@@ -133,12 +141,12 @@ public class leveOrderTraversing {
         }
         // display(root);
         int level = height(root);
-        // System.out.println(level);
-        for(int i=2;i<=level;i++)
-        {
-            nthLevel(root, i);
-            System.out.println();
-        }
+        System.out.println(level);
+        // for(int i=2;i<=level;i++)
+        // {
+        //     nthLevel(root, i);
+        //     System.out.println();
+        // }
         // System.out.println(level);
 
         // nthLevel(root, level);

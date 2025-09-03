@@ -18,6 +18,18 @@ public class addtwoarray {
         }
         System.out.println();
     }
+
+    public static void addArray(int a1[], int size1, int a2[], int size2){
+        
+        for(int i=0;i<size1;i++){
+            a1[i] += a2[i];
+        }
+
+        for(int i=0;i<size1;i++){
+            System.out.print(a1[i] + " ");
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter size1: ");
@@ -34,6 +46,6 @@ public class addtwoarray {
         {
             arr2[i] = sc.nextInt();
         }
-        addarray(arr1, size1, arr2, size2);
+        addArray(arr1, size1, arr2, size2);
     }
 }
