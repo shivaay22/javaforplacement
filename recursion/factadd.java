@@ -6,7 +6,7 @@ public class factadd {
         {
             return 0;
         }
-        int recans = n + recadd(n-1);
+        int recans = n * recadd(n-1);
         return recans;
     }
     public static void main(String[] args) {
@@ -16,3 +16,4 @@ public class factadd {
         System.out.println(recadd(n));
     }
 }
++*9///////////////////////////////////////////////////////////////////////////

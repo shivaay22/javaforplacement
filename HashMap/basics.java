@@ -21,6 +21,9 @@ public class basics {
         System.out.println(map.containsKey("India"));
         System.out.println(map.containsKey("Indones"));
 
+        //changing the value Put => Insertion and Updation
+        map.put("china", 75); 
+
         // Remove
         System.out.println(map.remove("China"));
 
@@ -47,6 +50,10 @@ public class basics {
             System.out.print(e.getKey() + " => " + e.getValue());
         }
         System.out.println();
+
+        for(String key : map.keySet()){
+            System.out.println("Key => " + key + "value =>" + map.get(key));
+        }
 
     }
     

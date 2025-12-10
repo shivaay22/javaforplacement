@@ -34,6 +34,38 @@ public class mergearray {
         }
         System.out.println();
     }
+
+    public static void mergeArr2(int arr1[],int arr2[]){
+        int n1 = arr1.length;
+        int n2 = arr2.length;
+        int mergeArr[] = new int[n1+n2];
+        for(int i=0;i<n1;i++){
+            mergeArr[i] = arr1[i];
+        }
+        for(int i=0;i<n2;i++){
+           mergeArr[n1+i] = arr2[i];
+        }
+
+        for(int i=0;i<mergeArr.length;i++){
+            System.out.print(mergeArr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void copyArray(int arr[]){
+        int n = arr.length;
+        // int k = 0;
+        int newArr[] = new int[n];
+
+        for(int i=0;i<n;i++){
+            newArr[i] = arr[i]; 
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String args[])
     {
         // Scanner sc = new Scanner(System.in);
@@ -73,6 +105,7 @@ public class mergearray {
         int arr1[] = {1, 3, 5, 7};
         int arr2[] = {2, 4, 6, 8, 10};
 
-         mergeArr(arr1.length, arr2.length, arr1, arr2);
+        //  mergeArr2(arr1, arr2);
+        copyArray(arr2);
     }
 }

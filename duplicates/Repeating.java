@@ -1,43 +1,50 @@
-// package duplicates;
+import java.util.ArrayList;
+import java.util.HashSet;
 
-public class Repeating {
+public class Repeating{
 
-    public static void rep1(int n, int arr[]) {
-        int newArr[] = new int[n];
-        int size = 0;
+    public static void distinct(int arr[]){
+        int n = arr.length;
 
-        for (int i = 0; i < n; i++) {
+        for(int i=0;i<n;i++){
             boolean flag = false;
-
-            // check if arr[i] is repeated
-            for (int j = i + 1; j < n; j++) {
-                if (arr[i] == arr[j]) {
+            for(int j=0;j<i;j++){
+                if(arr[i] == arr[j]){
                     flag = true;
                     break;
                 }
             }
-        
-            boolean isAlreadyInserted = false;
-            for(int x=0;x<size;x++){
-                if(newArr[x] == arr[i]){
-                    isAlreadyInserted = true;
-                    break;
-                }
+            if(!flag){
+                System.out.print(arr[i] + " ");
             }
-        if(!isAlreadyInserted && flag){
-            newArr[size++] = arr[i];
-        }
-    }
-        for(int i=0;i<size;i++){
-            System.out.print(newArr[i] + " ");
         }
         System.out.println();
     }
 
-    public static void main(String[] args) {
-        int arr[] = {1, 1, 2, 2, 3, 1, 2, 5, 5,4};
-       int n = arr.length;
-       rep1(n, arr);
+    public static void repeating(int arr[]){
 
+        ArrayList<Integer> newArr = new ArrayList<>();
+        HashSet<Integer> hs = new HashSet<>();
+        int n = arr.length;
+        for(int i=0;i<n;i++){
+            boolean flag = false;
+            for(int j=0;j<i;j++){
+                if(arr[i] == arr[j]){
+                    flag = true;
+                    break;
+                }
+            }
+            
+            if(flag){
+                // newArr.add(arr[i]);
+                hs.add(arr[i]);
+            }
+        }
+    }
+
+    public static void main(String args[]){
+        int arr[] = {1,1,2,2,1,5,6,2,21,22,25,21,22};
+        // distinct(arr);
+        // nonRepeat(arr);
     }
 }

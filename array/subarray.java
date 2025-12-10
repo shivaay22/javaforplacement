@@ -1,6 +1,7 @@
 import java.util.Scanner;
+import java.util.*;
 public class subarray {
-    public static void sub(int a[],int n)
+    public static int sub(int a[],int n)
     {
         int sum = 0;
         for(int i=0;i<n;i++)
@@ -13,15 +14,58 @@ public class subarray {
                 {
                     System.out.print(a[k] + " ");
                     // sum = sum + a[k];
-                    // if(a[k]%2 != 0)
-                    // {
-                    //     sum = sum + a[k];
+                    if(a[k]%2 != 0)
+                    {
+                        sum = sum + a[k];
+                    }
+                    // if(k%2 != 0){
+                    //     sum += a[k];
                     // }
                 }
                 System.out.println();
             }
         }
-        // return sum;
+        return sum;
+    }
+
+    public static int sum(int arr[]){
+        int n = arr.length;
+        int sum = 0;
+        for(int i=0;i<n;i++){
+            int start = i;
+            for(int j=i;j<n;j++){
+                int end = j;
+                int len = end - start + 1;
+
+               if(len % 2 != 0){
+                    for(int k=start;k<=end;k++){
+                        sum += arr[k];
+                    }
+               }
+            }
+        }
+        return sum;
+    }
+
+    public static int fun3(int arr[]){
+        // ArrayList<Integer> newArr = new ArrayList<>();
+        Arrays.sort(arr);
+        int n = arr.length;
+        int sum = 0;
+        int count = 0;
+        for(int i=0;i<n;i++){
+            int start = i;
+            for(int j=i;j<n;j++){
+                int end = j;
+                
+                if(arr[start] != arr[end]){
+                    count += 1;
+                    sum = sum + (count * count);
+                }
+            }
+        }
+        return count;
+
     }
     public static void main(String args[])
     {
@@ -33,8 +77,9 @@ public class subarray {
         {
             arr[i] = sc.nextInt();
         }
-        sub(arr, size);
+        // sub(arr, size);
         // System.out.println(sub(arr, size));
+        System.out.println(fun3(arr));
     }
 }
 

@@ -10,15 +10,15 @@ public class newPairs {
             {
                 int ele2 = arr[j];
 
-                // for(int k=j+1;k<arr.length;k++)
-                // {
-                //     System.out.println(ele + " " + ele2 + " " + arr[k]+ " ");
-                // }
-                for(int k = ele;k<ele2;k++)
+                for(int k=j+1;k<arr.length;k++)
                 {
-                    System.out.print(arr[k] + " ");
+                    System.out.print(ele + " " + ele2 + " " + arr[k]+ " ");
                 }
-                System.out.println();
+                // for(int k = ele;k<ele2;k++)
+                // {
+                //     System.out.print(arr[k] + " ");
+                // }
+                // System.out.println();
             }
         }
        

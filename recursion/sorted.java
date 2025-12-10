@@ -15,7 +15,7 @@ public class sorted {
     }
     public static void main(String[] args) {
         
-        int arr[] = {1,4,3,4,5};
+        int arr[] = {1,2,3,4,5};
         int size = 5;
         System.out.println(sort(arr, size, 0));
     }

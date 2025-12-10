@@ -51,17 +51,49 @@ public class prefixSum {
         }
     }
 
+    public static void partion2(int arr[]){
+        int n = arr.length;
+
+        int sum = 0;
+        for(int i=0;i<n;i++){
+            sum = sum + arr[i];
+        }
+
+        boolean flag = false;
+        for(int i=0;i<n;i++){
+            if(2*arr[i] == sum){
+                flag = true;
+                break;
+            }
+        }
+
+        if(flag){
+            System.out.println("yes");
+        }
+        else{
+            System.out.println("no");
+        }
+
+    }
+
 
     public static void main(String[] args) {
-        int arr[] = {10,2,3,4,5,5,10};
-        int newarr[] = sumOfPrefix(arr);
-        // prefixSum(arr);
-        for(int i=0;i<newarr.length;i++)
-        {
-            System.out.print(newarr[i] + " ");
+        int arr[] = {1,2,3,4,10};
+        int n = arr.length;
+
+        // int newarr[] = sumOfPrefix(arr);
+        prefixSum(arr);
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
+        // for(int i=0;i<newarr.length;i++)
+        // {
+        //     System.out.print(newarr[i] + " ");
+        // }
+        // System.out.println();
         // partion(arr);
+        // partion2(arr);
         
     }
 }

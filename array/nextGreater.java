@@ -1,7 +1,7 @@
 public class nextGreater {
     
     public static void main(String[] args) {
-        int arr[] = {1,3,2,1,8,6,3,4};
+        int arr[] = {4, 8, 5, 2, 25};
         int res[] = new int[arr.length];
 
         for(int i=0;i<arr.length;i++)

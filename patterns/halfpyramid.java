@@ -24,7 +24,7 @@ public class halfpyramid {
 
         for(int i=0;i<4;i++)
         {
-            for(int j=i;j<4;j++)
+            for(int j=4;j>i;j--)
             {
                 System.out.print("*");
             }

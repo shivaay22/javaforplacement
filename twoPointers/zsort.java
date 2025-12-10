@@ -36,9 +36,33 @@ public class zsort {
         
         }
 
+    public static void moveZeroToEnd(int arr[]){
+        int n = arr.length;
+        int left = 0;
+        int right = n - 1;
+
+       while(left < right){
+            while(left < right && arr[left] != 0){
+                left++;
+            }
+            while(left < right && arr[right] == 0){
+                right--;
+            }
+
+            if(left < right){
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+
+                left++;
+                right--;
+            }
+       }
+    }
+
     public static void main(String[] args) {
 
-        int arr[] = {0,1,0,1,0,1,0,1,0,1};
+        int arr[] = {0,1,0,0,1,0,1};
         sort(arr);
         for(int i=0;i<arr.length;i++)
         {

@@ -9,18 +9,11 @@ public class arraysSort {
 
         while(i<j)
         {
-            if(arr[i] > arr[j])
-            {
-                ans[k] = arr[i] * arr[i];
-                k++;
-                i++;
-            }
-            else
-            {
+            
                 ans[k] = arr[j] * arr[j];
                 k++;
                 j--;
-            }
+            
         }
         return ans;
     }

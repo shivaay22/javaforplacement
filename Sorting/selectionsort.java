@@ -27,3 +27,6 @@ public class selectionsort {
         System.out.println();
     }
 }
+/*
+🔥 Swap occurs ONLY when the smallest element is not at the current position.
+🔥 If the current element is already the smallest, no swap. */

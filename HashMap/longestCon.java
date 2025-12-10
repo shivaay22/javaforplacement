@@ -23,8 +23,7 @@ public class longestCon {
         }
         return maxStreak;
     }
-    
-    public static void main(String[] args) {
+        public static void main(String[] args) {
        int arr[] = {};
        HashSet<Integer> st = new HashSet<>();
        for(int num : arr)

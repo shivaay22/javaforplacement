@@ -66,6 +66,6 @@ public class newMergeArray {
         int arr2[] = {1,3,5,7};
 
         solution s1 = new solution();
-        s1.newmergeArr(arr1, arr2);
+        s1.mergeArr(arr1, arr2);
     }
 }

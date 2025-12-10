@@ -1,6 +1,20 @@
 import java.util.*;
 
 public class hashSer {
+
+    public static void basics(){
+        HashSet<String> st = new HashSet<>();
+        st.add("james");
+        st.add("scoot");
+
+        System.out.println(st.contains("james"));
+        System.out.println(st.size());
+        st.remove("james");
+
+        for(String s : st){
+            System.out.println(s);
+        }
+    }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

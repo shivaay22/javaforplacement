@@ -26,8 +26,9 @@ public class digits {
             return;
         }
         
+         System.out.println(5 + "*" + n + " = " + 5 * n);
         table(n-1);
-        System.out.println(5 + "*" + n + " = " + 5 * n);
+        // System.out.println(5 + "*" + n + " = " + 5 * n);
         
         
     }

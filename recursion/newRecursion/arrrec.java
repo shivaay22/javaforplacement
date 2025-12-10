@@ -43,8 +43,6 @@ public static void printarr(int arr[],int i,int sum)
                digit(n/10, count+1);
         }
 
-        
-        public 
         public static void main(String[] args) {
             int arr[] = {1,2,3,4,5};
         //     printarr(arr, 0,1);

@@ -1,7 +1,7 @@
 // package HashMap;
 
 import java.util.HashMap;
-import java.util.*;
+// import java.util.*;
 
 public class frequency {
     
@@ -21,28 +21,24 @@ public class frequency {
             }
         }
 
+
         int maxFreq = 0;
         int ansKey = -1;
 
-        // for(var ele : map.entrySet())
-        // {
-        //     if(ele.getValue() > maxFreq)
-        //     {
-        //         maxFreq = ele.getValue();
-        //         ansKey = ele.getKey();
-        //     }
-        // }
-        // System.out.println(ansKey);
+       
 
         for(Integer key : map.keySet())
         {
             if(map.get(key) > maxFreq)
             {
                 maxFreq = map.get(key);
+                // count += 1;
                 ansKey = key;
             }
         }
         System.out.println(ansKey);
+        // System.out.println(maxFreq);
+        System.out.println(map.get(ansKey));
         // int maxFreq = 0;
         // for(Integer num : map.values())
         // {
@@ -76,3 +72,13 @@ public class frequency {
         // System.out.println();
 
         // System.out.println(map.keySet());
+
+         // for(var ele : map.entrySet())
+        // {
+        //     if(ele.getValue() > maxFreq)
+        //     {
+        //         maxFreq = ele.getValue();
+        //         ansKey = ele.getKey();
+        //     }
+        // }
+        // System.out.println(ansKey);

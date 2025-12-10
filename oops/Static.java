@@ -34,13 +34,13 @@ public class Static {
         obj1.print();
 
 
-        obj1.modify();
-        obj1.print();
+        // obj1.modify();
+        // obj1.print();
 
 
-        obj1.modify();
-        obj2.print();
-        obj2.print();
+        // obj1.modify();
+        // obj2.print();
+        // obj2.print();
 
 
        

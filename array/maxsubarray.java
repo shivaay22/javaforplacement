@@ -25,6 +25,19 @@ public class maxsubarray {
         System.out.println("Max sum: " + maxsum);
     }
 
+    public static void maxsubarr2(int arr[],int n){
+        // int currSum = 0;
+        int ans = -1;
+        for(int i=0;i<n;i++){
+            int currSum = 0;
+            for(int j=i;j<n;j++){
+                currSum += arr[j];
+            }
+
+            ans = Math.max(ans, currSum);
+        }
+        System.out.println(ans);
+    }
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter size: ");
@@ -34,6 +47,7 @@ public class maxsubarray {
             arr[i] = sc.nextInt();
         }
         maxsubarr(arr, size);
+        maxsubarr2(arr, size);
         sc.close();
     }
 }

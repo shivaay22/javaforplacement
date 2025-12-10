@@ -13,12 +13,12 @@ public class bubblesort
                     a[i] = a[j];
                     a[j] = temp;
                 }
-                System.out.print("pass:" +  (i + 1) + " " + "->");
-                for(int k=0;k<n;k++)
-                {
-                    System.out.print(a[k] + " ");
-                }
-                System.out.println();
+                // System.out.print("pass:" +  (i + 1) + " " + "->");
+                // for(int k=0;k<n;k++)
+                // {
+                //     System.out.print(a[k] + " ");
+                // }
+                // System.out.println();
             }
         }
     }
@@ -32,5 +32,9 @@ public class bubblesort
             arr[i] = sc.nextInt();
         }
         sort(arr, size);
+        for(int i=0;i<size;i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 }
